@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <title>Tip Calculator</title>
+    </head>
+    <body>
+        <div class="calculator-container">
+            <div class="blur-screen">
+                <h1>Tip Calculator</h1>
+                <hr class="underline">
+                <p class="calc-p">Use the form below to calculate your tip</p>
+
+                <div class="total-sheet">
+                    <div class="sheet">
+
+                        <div class="flex-sheet">
+                            <div class="total-sheet-divs">
+                                <p>Bill</p>
+                            </div>
+                            <div class="total-sheet-divs">
+                                <p class="bill"></p>
+                            </div>
+                        </div>
+
+                        <div class="flex-sheet">
+                            <div class="total-sheet-divs">
+                               <p>Tip</p> 
+                            </div>
+                            <div class="total-sheet-divs">
+                                <p class="tip"></p>
+                            </div>
+                        </div>
+                        <hr class="divider">
+                        <div class="flex-sheet">
+                            <div class="total-sheet-divs">
+                                <p>Total</p>    
+                            </div>
+                            <div class="total-sheet-divs">
+                                <p class="total"></p>
+                            </div>
+                        </div>
+                        <hr class="divider">
+                        <div class="flex-sheet">
+                            <div class="total-sheet-divs">
+                                <p>Total per person</p>    
+                            </div>
+                            <div class="total-sheet-divs">
+                                <p class="per-person"></p> 
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="input-sheet">
+                    <div class="sheet">
+    
+                        <div class="input-row">
+                            <label class="bill-amount" for="billInput">Bill Amount</label>
+                            <div class="bill-group">
+                                <div class="dollar-sign-div">
+                                    <span class="dollar-sign">$</span>
+                                </div>
+                                <input type="number" class="bill-input" id="billInput"  onfocus="this.value=''"  min="00.00" value="0"  step="0.010">
+                            </div>
+                        </div>
+    
+                        <div class="input-row">
+                            <label class="tip-amount" for="tipForm">Tip Amount</label>
+                            <select class="select" id="tipForm">
+                                <option value=".05">5% </option>
+                                <option value=".1">10% </option>
+                                <option selected value=".15">15% </option>
+                                <option value=".2">20% </option>
+                                <option value=".25">25% </option>
+                            </select>
+                        </div>
+
+                        <div class="input-row">
+                            <label class="share-between" for="shareInput">Split the bill between</label>
+                            <div>
+                                <input type="number" class="share-input share-input-styles" id="shareInput" onfocus="this.value=''"  min="1" value="1" step="1">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <button>Calculate Tip Total</button>
+            </div> 
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
